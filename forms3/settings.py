@@ -19,7 +19,7 @@ env=Env()
 Env.read_env(os.path.join(BASE_DIR,'.env'))
 
 ENVIRONMENT=env('ENVIRONMENT')
-ENVIRONMENT='development'
+# ENVIRONMENT='production'
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
 
@@ -32,7 +32,12 @@ SECRET_KEY = 'django-insecure-5$w!1w$sqm)sy#-t)ft9=io6y^(p%z9*omw!+qiw(1+0%r^1$$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1','forms3.onrender.com']
+
+CSRF_TRUSTED_ORIGINS=["https://forms3.onrender.com"]
+
+INTERNAL_IPS=('127.0.0.1','localhost:8000')
 
 
 # Application definition
